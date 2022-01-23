@@ -1,9 +1,9 @@
 var game = new Phaser.Game(600, 600, Phaser.CANVAS, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 
 function preload() {
-    game.load.spritesheet('formiga', 'assets/ant.png', 25, 25);
-    game.load.spritesheet('tarta', 'assets/Turtle.png', 50, 50);
-    game.load.image('rochas', 'assets/rochas.png');
+    game.load.spritesheet('formiga', 'ant.png', 25, 25);
+    game.load.spritesheet('tarta', 'Turtle.png', 50, 50);
+    game.load.image('rochas', 'rochas.png');
 
 }
 
