@@ -22,12 +22,24 @@ var player;
 var formiga;
 var direcao;
 
+const keys = [  'idle', 'left', 'right', 'up', 'down' ];
+
 function create() {
 
     back = this.add.image(300, 300, 'rochas');
 
     // Cria a tartaruga
     //*******************
+
+    this.anims.create({
+            key: 'idle',
+            frames: this.anims.generateFrameNumbers('tarta', { frames: [ 0, 1 ] }),
+            frameRate: 8,
+            repeat: -1
+        });
+    
+    this.add.sprite(0, 0, 'tarta')
+            .play('idle');
     /*
     player = this.add.sprite(50, 50, 'tarta', 1);
 
