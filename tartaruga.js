@@ -165,6 +165,8 @@ function update ()
     
     if (n==1)
     {
+        formiga.setVelocityX(0);
+        formiga.setVelocityY(0);
         n = Math.floor(Math.random() * 11) % 5
         if (n==0) { formiga.play('fidle'); }
         if (n==1) { formiga.play('fleft'); formiga.setVelocityX(-100);}
@@ -175,7 +177,6 @@ function update ()
     
     player.setVelocityX(0);
     player.setVelocityY(0);
-    formiga.setVelocity(0);
     
     if (cursors.left.isDown)
     {
