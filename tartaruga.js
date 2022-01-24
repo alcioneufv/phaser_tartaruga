@@ -4,6 +4,7 @@ var config = {
     height: 600,
     scene: {
         preload: preload,
+        update: update,
         create: create
     }
 };
@@ -42,8 +43,7 @@ function create() {
     this.anims.create({ key: 'down', frames: this.anims.generateFrameNumbers('tarta', { frames: [ 2, 3 ] }),
             frameRate: 5, repeat: -1 });
     
-    this.add.sprite(300, 300, 'tarta')
-            .play('idle');
+    turtle = this.add.sprite(300, 300, 'tarta').play('idle');
     /*
     player = this.add.sprite(50, 50, 'tarta', 1);
 
@@ -154,3 +154,30 @@ function render() {
 
 }
 */
+
+function update ()
+{
+    turtle.setVelocity(0);
+
+    if (cursors.left.isDown)
+    {
+        turtle.setVelocityX(-300);
+        turtle.play('left');
+    }
+    else if (cursors.right.isDown)
+    {
+        turtle.setVelocityX(300);
+        turtle.play('right');
+    }
+
+    if (cursors.up.isDown)
+    {
+        turtle.setVelocityY(-300);
+        turtle.play('up');
+    }
+    else if (cursors.down.isDown)
+    {
+        turtle.setVelocityY(300);
+        turtle.play('down');
+    }
+}
