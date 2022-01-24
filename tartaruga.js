@@ -27,12 +27,10 @@ var direcao;
 function create() {
 
     back = this.add.image(300, 300, 'rochas');
-    back.smoothed = false;
 
     // Cria a tartaruga
     //*******************
-    player = game.add.sprite(50, 50, 'tarta', 1);
-    player.smoothed = false;
+    player = this.add.sprite(50, 50, 'tarta', 1);
 
     player.animations.add('left', [6,7], 10, true);
     player.animations.add('right', [4,5], 10, true);
