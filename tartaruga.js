@@ -52,12 +52,12 @@ function create() {
     this.anims.create({ key: 'down', frames: this.anims.generateFrameNumbers('tarta', { frames: [ 2, 3 ] }),
             frameRate: 5, repeat: -1 });
     
-    turtle = this.add.sprite(300, 300, 'tarta').play('idle');
+    player = this.add.sprite(300, 300, 'tarta').play('idle');
     
     
 //    turtle = this.physics.add.sprite(300, 300, 'tarta');
 
-    turtle.setCollideWorldBounds(true);
+    player.setCollideWorldBounds(true);
     /*
     player = this.add.sprite(50, 50, 'tarta', 1);
 
@@ -174,23 +174,23 @@ function update ()
 
     if (cursors.left.isDown)
     {
-        turtle.setVelocityX(-300);
-        turtle.play('left');
+        player.setVelocityX(-300);
+        player.play('left');
     }
     else if (cursors.right.isDown)
     {
-        turtle.setVelocityX(300);
-        turtle.play('right');
+        player.setVelocityX(300);
+        player.play('right');
     }
 
     if (cursors.up.isDown)
     {
-        turtle.setVelocityY(-300);
-        turtle.play('up');
+        player.setVelocityY(-300);
+        player.play('up');
     }
     else if (cursors.down.isDown)
     {
-        turtle.setVelocityY(300);
-        turtle.play('down');
+        player.setVelocityY(300);
+        player.play('down');
     }
 }
