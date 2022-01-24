@@ -67,7 +67,7 @@ function create() {
     this.anims.create({ key: 'fup', frames: this.anims.generateFrameNumbers('formiga', { frames: [ 0, 1 ] }), frameRate: 5, repeat: -1 });
     this.anims.create({ key: 'fdown', frames: this.anims.generateFrameNumbers('formiga', { frames: [ 2, 3 ] }), frameRate: 5, repeat: -1 });
 
-    formiga = this.add.sprite(100, 100, 'formiga').play('fidle');
+    formiga = this.physics.add.sprite(100, 100, 'formiga').play('fidle');
 /*    formiga = game.add.sprite(100, 100, 'formiga', 1);
 
     formiga.animations.add('downf', [6,7], 10, true);
