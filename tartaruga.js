@@ -175,6 +175,7 @@ function update ()
     
     player.setVelocityX(0);
     player.setVelocityY(0);
+    formiga.setVelocity(0);
     
     if (cursors.left.isDown)
     {
