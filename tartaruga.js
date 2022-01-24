@@ -52,10 +52,10 @@ function create() {
     this.anims.create({ key: 'down', frames: this.anims.generateFrameNumbers('tarta', { frames: [ 2, 3 ] }),
             frameRate: 5, repeat: -1 });
     
-//    turtle = this.add.sprite(300, 300, 'tarta').play('idle');
+    turtle = this.add.sprite(300, 300, 'tarta').play('idle');
     
     
-    turtle = this.physics.add.sprite(300, 300, 'tarta');
+//    turtle = this.physics.add.sprite(300, 300, 'tarta');
 
     turtle.setCollideWorldBounds(true);
     /*
