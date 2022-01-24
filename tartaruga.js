@@ -1,9 +1,21 @@
-var game = new Phaser.Game(600, 600, Phaser.CANVAS, 'phaser-example', { preload: preload, create: create, update: update, render: render });
+var config = {
+    type: Phaser.AUTO,
+    width: 600,
+    height: 600,
+    scene: {
+        preload: preload,
+        create: create,
+        update: update,
+        render: render
+    }
+};
+
+var game = new Phaser.Game(config);
 
 function preload() {
-    game.load.spritesheet('formiga', 'ant.png', 25, 25);
-    game.load.spritesheet('tarta', 'Turtle.png', 50, 50);
-    game.load.image('rochas', 'rochas.png');
+    this.load.spritesheet('formiga', 'ant.png', 25, 25);
+    this.load.spritesheet('tarta', 'Turtle.png', 50, 50);
+    this.load.image('rochas', 'rochas.png');
 
 }
 
@@ -14,7 +26,7 @@ var direcao;
 
 function create() {
 
-    back = game.add.image(0, 0, 'rochas');
+    back = this.add.image(300, 300, 'rochas');
     back.smoothed = false;
 
     // Cria a tartaruga
