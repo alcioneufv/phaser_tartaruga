@@ -5,7 +5,7 @@ var config = {
     physics: {
         default: 'arcade',
         arcade: {
-            debug: true
+            debug: false
         }
     },
     scene: {
@@ -51,7 +51,7 @@ function create() {
     
     player = this.physics.add.sprite(300, 300, 'tarta').play('idle');
 
-    //player.setCollideWorldBounds(true);
+    player.setCollideWorldBounds(true);
 
     //  Cria o signal de colisao
  //   player.body.onWorldBounds = new Phaser.Signal();
