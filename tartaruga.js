@@ -166,7 +166,7 @@ function render() {
 function update ()
 {
     player.setVelocityX(0);
-    player.setVelocityX(0);
+    player.setVelocityY(0);
     if (cursors.left.isDown)
     {
         player.setVelocityX(-300);
