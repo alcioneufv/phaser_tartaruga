@@ -4,9 +4,7 @@ var config = {
     height: 600,
     scene: {
         preload: preload,
-        create: create,
-        update: update,
-        render: render
+        create: create
     }
 };
 
