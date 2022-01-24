@@ -62,10 +62,10 @@ function create() {
     // Cria a formiga
     //******************
     this.anims.create({ key: 'fidle', frames: this.anims.generateFrameNumbers('formiga', { frames: [ 0, 1 ] }), frameRate: 8, repeat: -1 });
-    this.anims.create({ key: 'fleft', frames: this.anims.generateFrameNumbers('formiga', { frames: [ 6, 7 ] }), frameRate: 5, repeat: -1 });
-    this.anims.create({ key: 'fright', frames: this.anims.generateFrameNumbers('formiga', { frames: [ 4, 5 ] }), frameRate: 5, repeat: -1 });
-    this.anims.create({ key: 'fup', frames: this.anims.generateFrameNumbers('formiga', { frames: [ 0, 1 ] }), frameRate: 5, repeat: -1 });
-    this.anims.create({ key: 'fdown', frames: this.anims.generateFrameNumbers('formiga', { frames: [ 2, 3 ] }), frameRate: 5, repeat: -1 });
+    this.anims.create({ key: 'fleft', frames: this.anims.generateFrameNumbers('formiga', { frames: [ 6, 7 ] }), frameRate: 3, repeat: -1 });
+    this.anims.create({ key: 'fright', frames: this.anims.generateFrameNumbers('formiga', { frames: [ 4, 5 ] }), frameRate: 3, repeat: -1 });
+    this.anims.create({ key: 'fup', frames: this.anims.generateFrameNumbers('formiga', { frames: [ 0, 1 ] }), frameRate: 3, repeat: -1 });
+    this.anims.create({ key: 'fdown', frames: this.anims.generateFrameNumbers('formiga', { frames: [ 2, 3 ] }), frameRate: 3, repeat: -1 });
 
     formiga = this.physics.add.sprite(50, 50, 'formiga').play('fidle');
     formiga.setCollideWorldBounds(true);
@@ -165,7 +165,7 @@ function update ()
     
     if (n==1)
     {
-        n = Math.floor(Math.random() * 10) % 5
+        n = Math.floor(Math.random() * 11) % 5
         if (n==0) { formiga.play('fidle'); }
         if (n==1) { formiga.play('fleft'); formiga.setVelocityX(-300);}
         if (n==2) { formiga.play('fright'); formiga.setVelocityX(300);}
