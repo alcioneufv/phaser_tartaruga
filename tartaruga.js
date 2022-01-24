@@ -165,10 +165,11 @@ function render() {
 
 function update ()
 {
-
+    player.setVelocityX(0);
+    player.setVelocityX(0);
     if (cursors.left.isDown)
     {
-        player.x+1;
+        player.setVelocityX(-300);
         player.play('left');
     }
     else if (cursors.right.isDown)
