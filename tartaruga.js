@@ -157,7 +157,6 @@ function render() {
 
 function update ()
 {
-    turtle.setVelocity(0);
 
     if (cursors.left.isDown)
     {
