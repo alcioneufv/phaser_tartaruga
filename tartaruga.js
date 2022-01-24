@@ -2,6 +2,12 @@ var config = {
     type: Phaser.AUTO,
     width: 600,
     height: 600,
+    physics: {
+        default: 'arcade',
+        arcade: {
+            debug: true
+        }
+    },
     scene: {
         preload: preload,
         update: update,
@@ -28,6 +34,9 @@ const keys = [  'idle', 'left', 'right', 'up', 'down' ];
 function create() {
 
     back = this.add.image(300, 300, 'rochas');
+    
+    cursors = this.input.keyboard.createCursorKeys();
+
 
     // Cria a tartaruga
     //*******************
@@ -43,7 +52,12 @@ function create() {
     this.anims.create({ key: 'down', frames: this.anims.generateFrameNumbers('tarta', { frames: [ 2, 3 ] }),
             frameRate: 5, repeat: -1 });
     
-    turtle = this.add.sprite(300, 300, 'tarta').play('idle');
+//    turtle = this.add.sprite(300, 300, 'tarta').play('idle');
+    
+    
+    turtle = this.physics.add.sprite(300, 300, 'tarta');
+
+    turtle.setCollideWorldBounds(true);
     /*
     player = this.add.sprite(50, 50, 'tarta', 1);
 
