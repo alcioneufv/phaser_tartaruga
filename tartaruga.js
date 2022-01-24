@@ -51,7 +51,7 @@ function create() {
     
     player = this.physics.add.sprite(300, 300, 'tarta').play('idle');
 
-    //player.setCollideWorldBounds(true);
+    player.setCollideWorldBounds(true);
 
     //  Cria o signal de colisao
  //   player.body.onWorldBounds = new Phaser.Signal();
@@ -68,6 +68,8 @@ function create() {
     this.anims.create({ key: 'fdown', frames: this.anims.generateFrameNumbers('formiga', { frames: [ 2, 3 ] }), frameRate: 5, repeat: -1 });
 
     formiga = this.physics.add.sprite(50, 50, 'formiga').play('fidle');
+    formiga.setCollideWorldBounds(true);
+    
 /*    formiga = game.add.sprite(100, 100, 'formiga', 1);
 
     formiga.animations.add('downf', [6,7], 10, true);
