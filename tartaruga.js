@@ -52,19 +52,7 @@ function create() {
     player = this.physics.add.sprite(300, 300, 'tarta').play('idle');
 
     player.setCollideWorldBounds(true);
-    /*
-    player = this.add.sprite(50, 50, 'tarta', 1);
 
-    player.animations.add('left', [6,7], 10, true);
-    player.animations.add('right', [4,5], 10, true);
-    player.animations.add('up', [0,1], 10, true);
-    player.animations.add('down', [2,3], 10, true);
-
-    game.physics.enable(player, Phaser.Physics.ARCADE);
-
-    player.body.bounce.set(1);
-    player.body.collideWorldBounds = true;
-*/
     //  Cria o signal de colisao
  //   player.body.onWorldBounds = new Phaser.Signal();
 
@@ -73,8 +61,14 @@ function create() {
 
     // Cria a formiga
     //******************
+    this.anims.create({ key: 'fidle', frames: this.anims.generateFrameNumbers('formiga', { frames: [ 0, 1 ] }), frameRate: 8, repeat: -1 });
+    this.anims.create({ key: 'fleft', frames: this.anims.generateFrameNumbers('formiga', { frames: [ 6, 7 ] }), frameRate: 5, repeat: -1 });
+    this.anims.create({ key: 'fright', frames: this.anims.generateFrameNumbers('formiga', { frames: [ 4, 5 ] }), frameRate: 5, repeat: -1 });
+    this.anims.create({ key: 'fup', frames: this.anims.generateFrameNumbers('formiga', { frames: [ 0, 1 ] }), frameRate: 5, repeat: -1 });
+    this.anims.create({ key: 'fdown', frames: this.anims.generateFrameNumbers('formiga', { frames: [ 2, 3 ] }), frameRate: 5, repeat: -1 });
+
+    formiga = this.add.sprite(100, 100, 'formiga').play('fidle');
 /*    formiga = game.add.sprite(100, 100, 'formiga', 1);
-    formiga.smoothed = false;
 
     formiga.animations.add('downf', [6,7], 10, true);
     formiga.animations.add('upf', [4,5], 10, true);
@@ -97,7 +91,7 @@ function update() {
 
     player.body.velocity.set(0);
     formiga.body.velocity.set(0);
-
+    
     if (cursors.left.isDown)
     {
         player.body.velocity.x =  -100;
@@ -165,8 +159,10 @@ function render() {
 
 function update ()
 {
+    
     player.setVelocityX(0);
     player.setVelocityY(0);
+    
     if (cursors.left.isDown)
     {
         player.setVelocityX(-300);
