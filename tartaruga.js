@@ -167,10 +167,10 @@ function update ()
     {
         n = Math.floor(Math.random() * 11) % 5
         if (n==0) { formiga.play('fidle'); }
-        if (n==1) { formiga.play('fleft'); formiga.setVelocityX(-300);}
-        if (n==2) { formiga.play('fright'); formiga.setVelocityX(300);}
-        if (n==3) { formiga.play('fup'); formiga.setVelocityY(-300);}
-        if (n==4) { formiga.play('fdown'); formiga.setVelocityY(300);}
+        if (n==1) { formiga.play('fleft'); formiga.setVelocityX(-100);}
+        if (n==2) { formiga.play('fright'); formiga.setVelocityX(100);}
+        if (n==3) { formiga.play('fup'); formiga.setVelocityY(-100);}
+        if (n==4) { formiga.play('fdown'); formiga.setVelocityY(100);}
     }
     
     player.setVelocityX(0);
