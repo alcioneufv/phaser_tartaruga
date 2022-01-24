@@ -168,7 +168,7 @@ function update ()
 
     if (cursors.left.isDown)
     {
-        player.setVelocityX(-300);
+        player.x+1;
         player.play('left');
     }
     else if (cursors.right.isDown)
