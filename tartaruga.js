@@ -159,6 +159,17 @@ function render() {
 
 function update ()
 {
+    let n = Math.floor(Math.random() * 10);
+    
+    if (n==1)
+    {
+        n = Math.floor(Math.random() * 10) % 5
+        if (n==0) { formiga.play('fidle'); }
+        if (n==1) { formiga.play('fleft'); formiga.setVelocityX(-300);}
+        if (n==2) { formiga.play('fright'); formiga.setVelocityX(300);}
+        if (n==3) { formiga.play('fup'); formiga.setVelocityY(-300);}
+        if (n==4) { formiga.play('fdown'); formiga.setVelocityY(-300);}
+    }
     
     player.setVelocityX(0);
     player.setVelocityY(0);
