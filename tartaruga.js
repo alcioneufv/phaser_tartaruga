@@ -13,8 +13,8 @@ var config = {
 var game = new Phaser.Game(config);
 
 function preload() {
-    this.load.spritesheet('formiga', 'ant.png', 25, 25);
-    this.load.spritesheet('tarta', 'Turtle.png', 50, 50);
+    this.load.spritesheet('formiga', 'ant.png', { frameWidth: 25, frameHeight: 25 });
+    this.load.spritesheet('tarta', 'Turtle.png', { frameWidth: 50, frameHeight: 50 });
     this.load.image('rochas', 'rochas.png');
 
 }
@@ -30,6 +30,7 @@ function create() {
 
     // Cria a tartaruga
     //*******************
+    /*
     player = this.add.sprite(50, 50, 'tarta', 1);
 
     player.animations.add('left', [6,7], 10, true);
@@ -41,16 +42,16 @@ function create() {
 
     player.body.bounce.set(1);
     player.body.collideWorldBounds = true;
-
+*/
     //  Cria o signal de colisao
-    player.body.onWorldBounds = new Phaser.Signal();
+ //   player.body.onWorldBounds = new Phaser.Signal();
 
     //  escuta o sinal
-    player.body.onWorldBounds.add(hitWorldBounds, this);
+//    player.body.onWorldBounds.add(hitWorldBounds, this);
 
     // Cria a formiga
     //******************
-    formiga = game.add.sprite(100, 100, 'formiga', 1);
+/*    formiga = game.add.sprite(100, 100, 'formiga', 1);
     formiga.smoothed = false;
 
     formiga.animations.add('downf', [6,7], 10, true);
@@ -61,9 +62,10 @@ function create() {
     game.physics.enable(formiga, Phaser.Physics.ARCADE);
 
     cursors = game.input.keyboard.createCursorKeys();
+    */
 }
 
-
+/*
 function hitWorldBounds (sprite) {
 
     sprite.play('flash');
@@ -137,4 +139,4 @@ function render() {
     game.debug.text(direcao, 32, 32);
 
 }
-
+*/
