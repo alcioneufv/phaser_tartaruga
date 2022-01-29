@@ -43,7 +43,7 @@ function create() {
 
     this.anims.create({ key: 'idle', frames: this.anims.generateFrameNumbers('tarta', { frames: [ 0, 1 ] }), frameRate: 5, repeat: -1 });
     this.anims.create({ key: 'left', frames: this.anims.generateFrameNumbers('tarta', { frames: [ 6, 7 ] }), frameRate: 10, repeat: -1 });
-    this.anims.create({ key: 'right', frames: this.anims.generateFrameNumbers('tarta', { frames: [ 4, 5 ] }), frameRate: 10, repeat: -1 });
+    this.anims.create({ key: 'right', frames: this.anims.generateFrameNumbers('tarta', { frames: [ 4, 5 ] }), frameRate: 30, repeat: -1 });
     this.anims.create({ key: 'up', frames: this.anims.generateFrameNumbers('tarta', { frames: [ 0, 1 ] }), frameRate: 10, repeat: -1 });
     this.anims.create({ key: 'down', frames: this.anims.generateFrameNumbers('tarta', { frames: [ 2, 3 ] }), frameRate: 10, repeat: -1 });
     
