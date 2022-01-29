@@ -43,7 +43,7 @@ function create() {
 
     this.anims.create({ key: 'idle', frames: this.anims.generateFrameNumbers('tarta', { start: 0, end: 1 }), frameRate: 5, repeat: -1 });
     this.anims.create({ key: 'left', frames: this.anims.generateFrameNumbers('tarta',  { start: 6, end: 7 }), frameRate: 10, repeat: -1 });
-    this.anims.create({ key: 'right', frames: this.anims.generateFrameNumbers('tarta', { start: 4, end: 5 }), frameRate: 30, repeat: -1 });
+    this.anims.create({ key: 'right', frames: this.anims.generateFrameNumbers('tarta', { start: 4, end: 5 }), frameRate: 10, repeat: -1 });
     this.anims.create({ key: 'up', frames: this.anims.generateFrameNumbers('tarta',  { start: 0, end: 1 }), frameRate: 10, repeat: -1 });
     this.anims.create({ key: 'down', frames: this.anims.generateFrameNumbers('tarta',  { start: 2, end: 3 }), frameRate: 10, repeat: -1 });
     
@@ -181,22 +181,22 @@ function update ()
     if (cursors.left.isDown)
     {
         player.setVelocityX(-300);
-        player.play('left');
+        player.anims.play('left', true);
     }
     else if (cursors.right.isDown)
     {
         player.setVelocityX(300);
-        player.play('right');
+        player.anims.play('right', true);
     }
 
     if (cursors.up.isDown)
     {
         player.setVelocityY(-300);
-        player.play('up');
+        player.anims.play('up', true);
     }
     else if (cursors.down.isDown)
     {
         player.setVelocityY(300);
-        player.play('down');
+        player.anims.play('down', true);
     }
 }
