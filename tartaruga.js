@@ -70,6 +70,8 @@ function create() {
     formiga = this.physics.add.sprite(50, 50, 'formiga').play('fidle');
     formiga.setCollideWorldBounds(true);
     
+    this.physics.add.collider(player, formiga);
+    
 /*    formiga = game.add.sprite(100, 100, 'formiga', 1);
 
     formiga.animations.add('downf', [6,7], 10, true);
